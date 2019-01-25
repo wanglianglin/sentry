@@ -27,17 +27,17 @@ class ReleaseHook(object):
 
         try:
             with transaction.atomic():
-                release = Release.objects.create(
+                release, created = Release.objects.create(
                     version=version, organization_id=self.project.organization_id, **values
-                )
+                ), True
         except IntegrityError:
-            release = Release.objects.get(
+            release, created = Release.objects.get(
                 version=version,
                 organization_id=self.project.organization_id,
-            )
+            ), False
             release.update(**values)
 
-        release.add_project(self.project)
+        release.add_project(self.project, process_resolutions=not created)
 
     # TODO(dcramer): this is being used by the release details endpoint, but
     # it'd be ideal if most if not all of this logic lived there, and this
@@ -59,7 +59,9 @@ class ReleaseHook(object):
                 )
         except IntegrityError:
             release = Release.objects.get(organization_id=project.organization_id, version=version)
-        release.add_project(project)
+        # Explicitly don't process resolutions here since we're setting a new
+        # commit list, which will handle resolution processing.
+        release.add_project(project, process_resolutions=False)
 
         release.set_commits(commit_list)
 
@@ -73,17 +75,19 @@ class ReleaseHook(object):
         values.setdefault('date_released', timezone.now())
         try:
             with transaction.atomic():
-                release = Release.objects.create(
-                    version=version, organization_id=self.project.organization_id, **values
-                )
+                release, created = Release.objects.create(
+                    version=version,
+                    organization_id=self.project.organization_id,
+                    **values
+                ), True
         except IntegrityError:
-            release = Release.objects.get(
+            release, created = Release.objects.get(
                 version=version,
                 organization_id=self.project.organization_id,
-            )
+            ), False
             release.update(**values)
 
-        release.add_project(self.project)
+        release.add_project(self.project, process_resolutions=not created)
 
         Activity.objects.create(
             type=Activity.RELEASE,
