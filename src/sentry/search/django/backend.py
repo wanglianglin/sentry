@@ -124,7 +124,7 @@ class QCallbackCondition(Condition):
         if search_filter:
             if search_filter.operator not in ('=', '!='):
                 raise InvalidSearchQuery(
-                    'Operator {} not valid for search {}'.format(
+                    u'Operator {} not valid for search {}'.format(
                         search_filter.operator,
                         search_filter,
                     ),
