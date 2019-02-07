@@ -79,6 +79,7 @@ class Button extends React.Component {
       label,
       borderless,
       priority,
+      disabled,
 
       // destructure from `buttonProps`
       // not necessary, but just in case someone re-orders props
@@ -97,6 +98,8 @@ class Button extends React.Component {
     const button = (
       <StyledButton
         aria-label={screenReaderLabel}
+        aria-disabled={disabled}
+        disabled={disabled}
         to={this.getUrl(to)}
         href={this.getUrl(href)}
         size={size}
@@ -187,7 +190,7 @@ const getColors = ({priority, disabled, borderless, theme}) => {
   `;
 };
 
-const StyledButton = styled(({busy, external, borderless, ...props}) => {
+const StyledButton = styled(({busy, external, borderless, disabled, ...props}) => {
   // Get component to use based on existance of `to` or `href` properties
   // Can be react-router `Link`, `a`, or `button`
   if (props.to) {

@@ -987,6 +987,7 @@ exports[`RuleBuilder renders 1`] = `
           size="small"
         >
           <StyledButton
+            aria-disabled={true}
             className="css-po7kq7-AddButton e1hyuoc79"
             disabled={true}
             href={null}
@@ -997,6 +998,7 @@ exports[`RuleBuilder renders 1`] = `
             to={null}
           >
             <Component
+              aria-disabled={true}
               className="e1hyuoc79 css-ogw40-StyledButton-getColors-AddButton eqrebog0"
               disabled={true}
               href={null}
@@ -1007,8 +1009,8 @@ exports[`RuleBuilder renders 1`] = `
               to={null}
             >
               <button
+                aria-disabled={true}
                 className="e1hyuoc79 css-ogw40-StyledButton-getColors-AddButton eqrebog0"
-                disabled={true}
                 href={null}
                 onClick={[Function]}
                 priority="primary"
@@ -2801,6 +2803,7 @@ exports[`RuleBuilder renders with suggestions 1`] = `
           size="small"
         >
           <StyledButton
+            aria-disabled={false}
             className="css-po7kq7-AddButton e1hyuoc79"
             disabled={false}
             onClick={[Function]}
@@ -2809,6 +2812,7 @@ exports[`RuleBuilder renders with suggestions 1`] = `
             size="small"
           >
             <Component
+              aria-disabled={false}
               className="e1hyuoc79 css-1q9tuf6-StyledButton-getColors-AddButton eqrebog0"
               disabled={false}
               onClick={[Function]}
@@ -2817,8 +2821,8 @@ exports[`RuleBuilder renders with suggestions 1`] = `
               size="small"
             >
               <button
+                aria-disabled={false}
                 className="e1hyuoc79 css-1q9tuf6-StyledButton-getColors-AddButton eqrebog0"
-                disabled={false}
                 onClick={[Function]}
                 priority="primary"
                 role="button"

@@ -745,6 +745,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                         size="small"
                       >
                         <StyledButton
+                          aria-disabled={false}
                           aria-label="Install"
                           className="btn btn-default"
                           disabled={false}
@@ -753,6 +754,7 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                           size="small"
                         >
                           <Component
+                            aria-disabled={false}
                             aria-label="Install"
                             className="btn btn-default css-dkprmi-StyledButton-getColors eqrebog0"
                             disabled={false}
@@ -761,9 +763,9 @@ exports[`Sentry App Installations when Apps exist displays all Apps owned by the
                             size="small"
                           >
                             <button
+                              aria-disabled={false}
                               aria-label="Install"
                               className="btn btn-default css-dkprmi-StyledButton-getColors eqrebog0"
-                              disabled={false}
                               onClick={[Function]}
                               role="button"
                               size="small"

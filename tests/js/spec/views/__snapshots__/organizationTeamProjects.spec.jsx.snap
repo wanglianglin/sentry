@@ -153,6 +153,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                               size="xsmall"
                                             >
                                               <StyledButton
+                                                aria-disabled={false}
                                                 className="css-o27a2e-StyledButton e1yghndz1"
                                                 disabled={false}
                                                 onClick={[Function]}
@@ -160,6 +161,7 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                                 size="xsmall"
                                               >
                                                 <Component
+                                                  aria-disabled={false}
                                                   className="e1yghndz1 css-108zzii-StyledButton-getColors-StyledButton eqrebog0"
                                                   disabled={false}
                                                   onClick={[Function]}
@@ -167,8 +169,8 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                                                   size="xsmall"
                                                 >
                                                   <button
+                                                    aria-disabled={false}
                                                     className="e1yghndz1 css-108zzii-StyledButton-getColors-StyledButton eqrebog0"
-                                                    disabled={false}
                                                     onClick={[Function]}
                                                     role="button"
                                                     size="xsmall"
@@ -404,12 +406,14 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                       size="small"
                     >
                       <StyledButton
+                        aria-disabled={false}
                         disabled={false}
                         onClick={[Function]}
                         role="button"
                         size="small"
                       >
                         <Component
+                          aria-disabled={false}
                           className="css-dkprmi-StyledButton-getColors eqrebog0"
                           disabled={false}
                           onClick={[Function]}
@@ -417,8 +421,8 @@ exports[`OrganizationTeamProjects Should render 1`] = `
                           size="small"
                         >
                           <button
+                            aria-disabled={false}
                             className="css-dkprmi-StyledButton-getColors eqrebog0"
-                            disabled={false}
                             onClick={[Function]}
                             role="button"
                             size="small"

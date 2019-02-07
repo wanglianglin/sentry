@@ -131,6 +131,7 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
         priority="success"
       >
         <StyledButton
+          aria-disabled={false}
           aria-label="Install"
           className="css-159raph-StyledButton ey7jt0i0"
           disabled={false}
@@ -139,6 +140,7 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
           role="button"
         >
           <Component
+            aria-disabled={false}
             aria-label="Install"
             className="ey7jt0i0 css-17kpa0r-StyledButton-getColors-StyledButton eqrebog0"
             disabled={false}
@@ -147,9 +149,9 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
             role="button"
           >
             <button
+              aria-disabled={false}
               aria-label="Install"
               className="ey7jt0i0 css-17kpa0r-StyledButton-getColors-StyledButton eqrebog0"
-              disabled={false}
               onClick={[Function]}
               priority="success"
               role="button"
@@ -182,6 +184,7 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
         onClick={[MockFunction]}
       >
         <StyledButton
+          aria-disabled={false}
           aria-label="Cancel"
           className="css-159raph-StyledButton ey7jt0i0"
           disabled={false}
@@ -189,6 +192,7 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
           role="button"
         >
           <Component
+            aria-disabled={false}
             aria-label="Cancel"
             className="ey7jt0i0 css-1xref87-StyledButton-getColors-StyledButton eqrebog0"
             disabled={false}
@@ -196,9 +200,9 @@ exports[`SentryAppPermissionsModal installs the application 1`] = `
             role="button"
           >
             <button
+              aria-disabled={false}
               aria-label="Cancel"
               className="ey7jt0i0 css-1xref87-StyledButton-getColors-StyledButton eqrebog0"
-              disabled={false}
               onClick={[Function]}
               role="button"
             >
@@ -353,6 +357,7 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
         priority="success"
       >
         <StyledButton
+          aria-disabled={false}
           aria-label="Install"
           className="css-159raph-StyledButton ey7jt0i0"
           disabled={false}
@@ -361,6 +366,7 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
           role="button"
         >
           <Component
+            aria-disabled={false}
             aria-label="Install"
             className="ey7jt0i0 css-17kpa0r-StyledButton-getColors-StyledButton eqrebog0"
             disabled={false}
@@ -369,9 +375,9 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
             role="button"
           >
             <button
+              aria-disabled={false}
               aria-label="Install"
               className="ey7jt0i0 css-17kpa0r-StyledButton-getColors-StyledButton eqrebog0"
-              disabled={false}
               onClick={[Function]}
               priority="success"
               role="button"
@@ -404,6 +410,7 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
         onClick={[MockFunction]}
       >
         <StyledButton
+          aria-disabled={false}
           aria-label="Cancel"
           className="css-159raph-StyledButton ey7jt0i0"
           disabled={false}
@@ -411,6 +418,7 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
           role="button"
         >
           <Component
+            aria-disabled={false}
             aria-label="Cancel"
             className="ey7jt0i0 css-1xref87-StyledButton-getColors-StyledButton eqrebog0"
             disabled={false}
@@ -418,9 +426,9 @@ exports[`SentryAppPermissionsModal renders permissions modal 1`] = `
             role="button"
           >
             <button
+              aria-disabled={false}
               aria-label="Cancel"
               className="ey7jt0i0 css-1xref87-StyledButton-getColors-StyledButton eqrebog0"
-              disabled={false}
               onClick={[Function]}
               role="button"
             >
