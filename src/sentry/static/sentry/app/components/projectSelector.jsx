@@ -186,7 +186,13 @@ class ProjectSelector extends React.Component {
         noResultsMessage={t('No projects found')}
         virtualizedHeight={40}
         emptyHidesInput
-        menuProps={{showSettingsLink: true, organization: org}}
+        inputActions={() => (
+          <div>
+            <ManageButton to={`/settings/${org.slug}/projects/`} size="xsmall">
+              {t('Manage')}
+            </ManageButton>
+          </div>
+        )}
         menuFooter={renderProps => {
           const renderedFooter =
             typeof menuFooter === 'function' ? menuFooter(renderProps) : menuFooter;
@@ -215,7 +221,7 @@ class ProjectSelector extends React.Component {
           label: ({inputValue}) => (
             <ProjectSelectorItem
               project={project}
-              organization={this.props.organization}
+              organization={org}
               multi={multi}
               inputValue={inputValue}
               isChecked={
@@ -339,6 +345,22 @@ const MultiSelectWrapper = styled('div')`
 
 const MultiSelect = styled(CheckboxFancy)`
   flex-shrink: 0;
+`;
+
+const ManageButton = styled(Button)`
+  display: block;
+  margin: 0 ${space(1)};
+  box-shadow: none;
+  border: 0;
+  background: ${p => p.theme.offWhite2};
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    border: 0;
+    background: ${p => p.theme.gray1};
+  }
 `;
 
 export default ProjectSelector;
