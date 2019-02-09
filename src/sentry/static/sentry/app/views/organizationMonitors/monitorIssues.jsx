@@ -28,14 +28,10 @@ export default class MonitorIssues extends Component {
         }}
         statsPeriod="0"
         pagination={false}
-        renderEmpty={() => (
-          <Panel>
-            <PanelBody>
-              <PanelItem justify="center">{t('No issues found')}</PanelItem>
-            </PanelBody>
-          </Panel>
-        )}
+        emptyText={t('No issues found')}
         showActions={false}
+        noBorder={true}
+        noMargin={true}
         params={{orgId}}
       />
     );

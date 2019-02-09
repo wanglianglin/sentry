@@ -55,10 +55,6 @@ def get_next_schedule(base_datetime, schedule_type, schedule):
 
 
 class MonitorStatus(ObjectStatus):
-    ACTIVE = 0
-    DISABLED = 1
-    PENDING_DELETION = 2
-    DELETION_IN_PROGRESS = 3
     OK = 4
     ERROR = 5
 
@@ -130,6 +126,14 @@ class Monitor(Model):
         index_together = (('type', 'next_checkin'),)
 
     __repr__ = sane_repr('guid', 'project_id', 'name')
+
+    def get_audit_log_data(self):
+        return {
+            'name': self.name,
+            'type': self.type,
+            'status': self.status,
+            'config': self.config,
+        }
 
     def get_next_scheduled_checkin(self, last_checkin=None):
         if last_checkin is None:
